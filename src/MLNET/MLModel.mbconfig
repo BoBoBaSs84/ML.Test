@@ -1,0 +1,745 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "SQL",
+    "Version": 1,
+    "ColumnProperties": [
+      {
+        "ColumnName": "ProductID",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ProductNumber",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "MakeFlag",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Boolean",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "FinishedGoodsFlag",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Boolean",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Color",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SafetyStockLevel",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ReorderPoint",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "StandardCost",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ListPrice",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Size",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SizeUnitMeasureCode",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "WeightUnitMeasureCode",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Weight",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "DaysToManufacture",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ProductLine",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Class",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Style",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ProductSubcategoryID",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ProductModelID",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SellStartDate",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "DateTime",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SellEndDate",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "DateTime",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "DiscontinuedDate",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "DateTime",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "rowguid",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ModifiedDate",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "DateTime",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      }
+    ],
+    "ConnectionString": "Data Source=.;Initial Catalog=AdventureWorks2019;Integrated Security=True",
+    "CommandString": "SELECT CAST([ProductID] as REAL), CAST([Name] as NVARCHAR(MAX)), CAST([ProductNumber] as NVARCHAR(MAX)), [MakeFlag], [FinishedGoodsFlag], CAST([Color] as NVARCHAR(MAX)), CAST([SafetyStockLevel] as REAL), CAST([ReorderPoint] as REAL), CAST([StandardCost] as REAL), CAST([ListPrice] as REAL), CAST([Size] as NVARCHAR(MAX)), CAST([SizeUnitMeasureCode] as NVARCHAR(MAX)), CAST([WeightUnitMeasureCode] as NVARCHAR(MAX)), CAST([Weight] as REAL), CAST([DaysToManufacture] as REAL), CAST([ProductLine] as NVARCHAR(MAX)), CAST([Class] as NVARCHAR(MAX)), CAST([Style] as NVARCHAR(MAX)), CAST([ProductSubcategoryID] as REAL), CAST([ProductModelID] as REAL), [SellStartDate], [SellEndDate], [DiscontinuedDate], CAST([rowguid] as NVARCHAR(MAX)), [ModifiedDate] FROM [Production].[Product]",
+    "DatabaseName": "AdventureWorks2019",
+    "SelectedTableDbo": "Production",
+    "TableName": "Product"
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "SdcaRegression",
+        "Score": 0.999999990637038,
+        "RuntimeInSeconds": 54.886,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e8",
+          "e0": {
+            "OutputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ],
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ],
+            "InputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "Name",
+            "OutputColumnName": "Name"
+          },
+          "e3": {
+            "InputColumnName": "ProductNumber",
+            "OutputColumnName": "ProductNumber"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid",
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID",
+              "Name",
+              "ProductNumber"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "SafetyStockLevel",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.999580946274395,
+        "RuntimeInSeconds": 0.366,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ],
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ],
+            "InputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "Name",
+            "OutputColumnName": "Name"
+          },
+          "e3": {
+            "InputColumnName": "ProductNumber",
+            "OutputColumnName": "ProductNumber"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid",
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID",
+              "Name",
+              "ProductNumber"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 6,
+            "MinimumExampleCountPerLeaf": 18,
+            "NumberOfTrees": 6,
+            "MaximumBinCountPerFeature": 248,
+            "FeatureFraction": 0.99999999,
+            "LearningRate": 0.99999977667298645,
+            "LabelColumnName": "SafetyStockLevel",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.99499746853531157,
+        "RuntimeInSeconds": 0.38,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e6",
+          "e0": {
+            "OutputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ],
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ],
+            "InputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "Name",
+            "OutputColumnName": "Name"
+          },
+          "e3": {
+            "InputColumnName": "ProductNumber",
+            "OutputColumnName": "ProductNumber"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid",
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID",
+              "Name",
+              "ProductNumber"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e6": {
+            "NumberOfTrees": 6,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.921572447,
+            "LabelColumnName": "SafetyStockLevel",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.99355669960738024,
+        "RuntimeInSeconds": 0.373,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e6",
+          "e0": {
+            "OutputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ],
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ],
+            "InputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "Name",
+            "OutputColumnName": "Name"
+          },
+          "e3": {
+            "InputColumnName": "ProductNumber",
+            "OutputColumnName": "ProductNumber"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid",
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID",
+              "Name",
+              "ProductNumber"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e6": {
+            "NumberOfTrees": 5,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "SafetyStockLevel",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.99181792349921061,
+        "RuntimeInSeconds": 1.142,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e6",
+          "e0": {
+            "OutputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ],
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ],
+            "InputColumnNames": [
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID"
+            ]
+          },
+          "e2": {
+            "InputColumnName": "Name",
+            "OutputColumnName": "Name"
+          },
+          "e3": {
+            "InputColumnName": "ProductNumber",
+            "OutputColumnName": "ProductNumber"
+          },
+          "e4": {
+            "InputColumnNames": [
+              "MakeFlag",
+              "FinishedGoodsFlag",
+              "Color",
+              "Size",
+              "SizeUnitMeasureCode",
+              "WeightUnitMeasureCode",
+              "ProductLine",
+              "Class",
+              "Style",
+              "rowguid",
+              "ProductID",
+              "ReorderPoint",
+              "StandardCost",
+              "ListPrice",
+              "Weight",
+              "DaysToManufacture",
+              "ProductSubcategoryID",
+              "ProductModelID",
+              "Name",
+              "ProductNumber"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e6": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "SafetyStockLevel",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "FeaturizeText",
+      "e3": "FeaturizeText",
+      "e4": "Concatenate",
+      "e5": "FastTreeRegression",
+      "e6": "FastForestRegression",
+      "e7": "LbfgsPoissonRegressionRegression",
+      "e8": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * e4 * (e5 + e6 + e7 + e8)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "D:\\Source\\ML.Test\\src\\MLNET\\MLModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 60,
+    "LabelColumn": "SafetyStockLevel",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
