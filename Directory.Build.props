@@ -14,11 +14,10 @@
     <AnalysisLevel>latest</AnalysisLevel>
     <AnalysisMode>recommended</AnalysisMode>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <Deterministic>true</Deterministic>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <Deterministic>True</Deterministic>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
